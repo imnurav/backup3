@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrowfunction</title>
+</head>
+
+<body>
+    <div class="container">
+        this is javascript tutorial
+    </div>
+    <script>
+        console.log("arrow function")
+        // function greet() {
+        //     console.log("hey good morning varun")
+        // }
+        // greet()
+        let greet = () => {
+            console.log("hey good night varun")
+        }
+        greet()
+
+        setTimeout(() => {
+            console.log("we are inside the set time out")
+        }, 3000);
+        let sum = (a, b) => {
+            return a + b;
+        }
+        let t = sum(34, 45)
+        console.log(t)
+
+
+        let sum2 = (a, b) => a + b
+        console.log(sum2(10, 12))
+
+
+        let half = a => a / 2
+        console.log(half(4))
+
+
+        let grey = () => console.log("good morning")
+        grey()
+
+
+        let obj1 = {
+            names: ["varun", "raj", "nisha", "soni"],
+            greeting: "good morning",
+            speak() {
+                this.names.forEach((student) => {
+                    console.log(this.greeting + " hey how are you " + student)
+                });
+                //in this case 'this' will access the the function create the this 
+                // this.names.forEach(function f(student) {
+                //     console.log(this.greeting + " hey how are you " + student)
+                // });
+            }
+        }
+        obj1.speak()
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
